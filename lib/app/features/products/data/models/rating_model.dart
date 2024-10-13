@@ -19,6 +19,13 @@ class RatingModel with _$RatingModel {
   factory RatingModel.fromJson(Map<String, dynamic> json) =>
       _$RatingModelFromJson(json);
 
+  factory RatingModel.fromEntity(Rating entity) {
+    return RatingModel(
+      rate: entity.rate,
+      count: entity.count,
+    );
+  }
+
   Rating toEntity() => Rating(
         rate: rate,
         count: count,

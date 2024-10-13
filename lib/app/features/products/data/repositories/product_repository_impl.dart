@@ -6,10 +6,10 @@ import 'package:fpdart/fpdart.dart';
 
 import '../../../../app.dart';
 
-class ProductsRepositoryImpl implements ProductRepository {
-  final ProductsRemoteDatasource _datasource;
+class ProductRepositoryImpl implements ProductRepository {
+  final ProductRemoteDatasource _datasource;
 
-  ProductsRepositoryImpl({required ProductsRemoteDatasource datasource})
+  ProductRepositoryImpl({required ProductRemoteDatasource datasource})
       : _datasource = datasource;
   @override
   Future<Either<Exception, List<Product>>> fetchProducts() async {

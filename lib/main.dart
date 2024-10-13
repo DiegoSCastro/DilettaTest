@@ -4,6 +4,6 @@ import 'app/app.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  // initServiceLocator();
+  createInjections();
   runApp(const WishListApp());
 }

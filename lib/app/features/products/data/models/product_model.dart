@@ -24,6 +24,18 @@ class ProductModel with _$ProductModel {
   factory ProductModel.fromJson(Map<String, dynamic> json) =>
       _$ProductModelFromJson(json);
 
+  factory ProductModel.fromEntity(Product entity) {
+    return ProductModel(
+      id: entity.id,
+      price: entity.price,
+      title: entity.title,
+      description: entity.description,
+      category: entity.category,
+      image: entity.image,
+      rating: RatingModel.fromEntity(entity.rating),
+    );
+  }
+
   Product toEntity() => Product(
         id: id,
         price: price,

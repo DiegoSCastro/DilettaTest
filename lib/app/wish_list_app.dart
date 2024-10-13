@@ -11,7 +11,8 @@ class WishListApp extends StatelessWidget {
       title: 'Favorite Products',
       theme: ThemeConfig.theme,
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      initialRoute: AppRoutes.home,
+      routes: AppRoutes.routes,
     );
   }
 }

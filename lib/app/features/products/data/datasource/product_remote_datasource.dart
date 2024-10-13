@@ -1,11 +1,11 @@
 import '../../../../app.dart';
 
-abstract interface class ProductsRemoteDatasource {
+abstract interface class ProductRemoteDatasource {
   Future<List<ProductModel>> fetchProducts();
 }
 
-class ProductsRemoteDatasourceImpl implements ProductsRemoteDatasource {
-  ProductsRemoteDatasourceImpl({
+class ProductRemoteDatasourceImpl implements ProductRemoteDatasource {
+  ProductRemoteDatasourceImpl({
     required AppHttpClient httpClient,
   }) : _httpClient = httpClient;
   final AppHttpClient _httpClient;
